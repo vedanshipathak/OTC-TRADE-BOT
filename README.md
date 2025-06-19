@@ -118,19 +118,6 @@ npm run dev
 
 ---
 
-## 🧪 Testing
-
-* **Backend**:
-
-  ```bash
-  npm run test
-  ```
-* **WebAgent**:
-  Add Jest/Mocha suites in `webAgent/test` (if present).
-* **Frontend**:
-  Use React Testing Library or Cypress to verify UI flows.
-
----
 
 ## ⚙️ Project Structure
 
@@ -154,11 +141,4 @@ npm run dev
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-*Happy building!*
 
