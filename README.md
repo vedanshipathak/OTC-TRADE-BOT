@@ -76,8 +76,34 @@ npm install
 npm run start
 ```
 
-* Exposes `/pathway/chat/create` and `/pathway/chat/:chatId` endpoints.
-* Forwards messages to Bland.ai and triggers optional webhook deliveries.
+#### Directory Structure
+
+```
+webAgent/
+├── controllers/
+│   └── blandController.js      # API logic for Bland.ai interaction
+├── routes/
+│   └── blandRoutes.js          # Express route definitions
+├── services/
+│   └── blandService.js         # Functions to call Bland.ai endpoints
+├── index.js                    # Entry point that sets up the Express app
+├── .env                        # Environment variables: BLAND_API_KEY, PATHWAY_ID, START_NODE_ID, WEBHOOK_URL
+├── package.json
+├── package-lock.json
+└── node_modules/
+```
+
+* **controllers/blandController.js**: Handles incoming HTTP requests and constructs responses.
+* **routes/blandRoutes.js**: Maps URL paths to controller functions.
+* **services/blandService.js**: Encapsulates direct calls to Bland.ai’s API endpoints.
+* **.env**: Sample variables:
+
+  ```bash
+  BLAND_API_KEY=Bearer <org_key>
+  PATHWAY_ID=<your_pathway_id>
+  START_NODE_ID=<start_node_id>
+  WEBHOOK_URL=<optional_webhook_url>
+  ```
 
 ### 3. Frontend App
 
@@ -127,3 +153,12 @@ npm run dev
 * Admin dashboard for analytics and conversation metrics
 
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+*Happy building!*
+
